@@ -50,9 +50,7 @@ public final class NaturalNumberInstanceOps extends NaturalNumber2 {
     @Override
     public void add(NaturalNumber n) {
         assert n != null : "Violation of: n is not null";
-        /**
-         * @decreases n
-         */
+
         int thisLowDigit = this.divideBy10();
         int nLowDigit = n.divideBy10();
         if (!n.isZero()) {

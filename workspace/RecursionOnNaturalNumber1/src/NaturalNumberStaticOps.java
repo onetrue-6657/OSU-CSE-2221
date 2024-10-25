@@ -139,13 +139,23 @@ public final class NaturalNumberStaticOps {
      * @return the {@code String} with commas
      * @ensures toStringWithCommas = [String representation of n with commas]
      */
-    private static String toStringWithCommas(NaturalNumber n) {
+    public static String toStringWithCommas(NaturalNumber n) {
         assert n != null : "Violation of: n is not null";
 
-        // TODO - fill in body
-
-        // This line added just to make the program compilable.
-        return "";
+        String str = "";
+        if (n.toString().length() > 3) {
+            int digit1 = n.divideBy10();
+            int digit2 = n.divideBy10();
+            int digit3 = n.divideBy10();
+            str += toStringWithCommas(n);
+            str = str + ',' + digit3 + digit2 + digit1;
+            n.multiplyBy10(digit3);
+            n.multiplyBy10(digit2);
+            n.multiplyBy10(digit1);
+        } else {
+            str += n;
+        }
+        return str;
     }
 
     /**

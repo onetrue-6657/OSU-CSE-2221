@@ -33,28 +33,10 @@ public final class Hailstone1 {
      *          n]
      */
     private static void generateSeries(NaturalNumber n, SimpleWriter out) {
-        // out.print(n + ", ");
         NaturalNumber zero = new NaturalNumber2(0);
         NaturalNumber one = new NaturalNumber2(1);
         NaturalNumber two = new NaturalNumber2(2);
         NaturalNumber three = new NaturalNumber2(3);
-//        while (!n.equals(one)) {
-//            NaturalNumber copy = new NaturalNumber2(n);
-//            if (copy.divide(two).equals(zero)) {
-//                n.divide(two);
-//                out.print(n);
-//                if (!n.equals(one)) {
-//                    out.print(", ");
-//                }
-//            } else {
-//                n.multiply(three);
-//                n.add(one);
-//                out.print(n);
-//                if (!n.equals(one)) {
-//                    out.print(", ");
-//                }
-//            }
-//        }
 
         while (!n.equals(one)) {
             NaturalNumber copy = new NaturalNumber2(n);

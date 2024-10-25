@@ -76,13 +76,6 @@ public final class Hailstone3 {
             }
         }
 
-        // while number is not 1
-        //      print number
-        //      divide number by 2
-        //      if remainder not zero
-        //          restore n
-        //          3x+1
-        //
         out.println();
         out.println("Length: " + len);
         out.println("Maximum: " + max);
